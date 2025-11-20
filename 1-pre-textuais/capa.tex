@@ -1,23 +1,34 @@
+%Remove a paginação desse documento
 \thispagestyle{empty}
-\newgeometry{top=4cm,bottom=1cm,left=3cm,right=3cm}
+
+%Habilita o uso de variáveis
 \makeatletter
+
 \begin{center}
-
-\includegraphics[width=1\textwidth]{logo_capa.pdf}
-
-% As variáveis @author, @title, @subtitulo, @cidade e @date dessa página,
-% podem ser ajustadas no arquivo config/informacoes_gerais.tex
-\vspace{3cm}
-\Large \@author
-
-\vspace{2cm}
-\Large \textbf{\MakeUppercase{\@title}\@subtitulo}
-
-\vspace*{\fill}
-\@cidade\\
-\@date
-
+	
+	%Adiciona as imagens dda universidade e do programa/instituto
+	\noindent
+	\includegraphics{logo_ufrj_capa.pdf}%
+	\hfill
+	\includegraphics{logo_programa_capa.pdf}
+	\vspace{1cm}
+	
+	% As variáveis @nomeuniversidade, @nomeinstituto, @nomeinstitutoparceiro, @author, @title, @subtitulo, @cidade e @date dessa página,
+	% podem ser ajustadas no arquivo config/informacoes_gerais.tex
+	\MakeUppercase{\@nomeuniversidade}\\
+	\MakeUppercase{\@nomeinstituto}\\
+	\MakeUppercase{\@nomeinstitutoparceiro}\\
+	\MakeUppercase{\@nomeprograma} (\@siglaprograma)
+	
+	\vspace{2cm}
+	\textbf{\MakeUppercase{\@author}}
+	
+	\vspace{4cm}
+	\MakeUppercase{\@title}\@subtitulo
+	
+	\vspace*{\fill}
+	\MakeUppercase{\@cidade}\\
+	\@date
+	
 \end{center}
 \makeatother
-\restoregeometry
-\newpage
