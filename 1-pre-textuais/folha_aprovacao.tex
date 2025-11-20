@@ -1,50 +1,43 @@
+\newpage
 \thispagestyle{empty}
 \makeatletter
 \begin{spacing}{1}
-\begin{center}
+	\begin{center}
 
-% As variáveis @author, @title, @subtitulo, @textofolharosto,
-% @orientadora, @coorientadora, @orientadorastitulo,
-% @progsigla, @faculdadesigla e  dessa página
-% podem ser ajustadas no arquivo config/informacoes_gerais.tex
-\large \MakeUppercase{\@author}
+		% As variáveis @author, @title, @subtitulo, @textofolharosto,
+		% @orientadora, @coorientadora, @orientadorastitulo,
+		% @progsigla, @faculdadesigla e  dessa página
+		% podem ser ajustadas no arquivo config/informacoes_gerais.tex
+		\@author
 
-\vspace{1.5cm}
-\large \textbf{\MakeUppercase{\@title}\@subtitulo}
+		\vspace{1.5cm}
+		\MakeUppercase{\@title}\@subtitulo
 
-\end{center}
+		\vspace{1.5cm}
+		\hfill\parbox{9cm}{\noindent\justifying\nohyphens{\@textofolharosto}}
+	\end{center}
 
-\vspace{0.5cm}
-\epigraph{\normalsize\justifying\nohyphens{\@textofolharosto}}
+	\vspace{1.5cm}
+	Aprovado em: 30 de março de \@date
 
-\vspace{1.5cm}
-Aprovado em 30 de março de \@date\ por:
+	\begin{center}
 
-\vspace{2cm}
-\begin{flushright}
+		\vspace{2cm}
+		\makebox[10cm]{\hrulefill}\\
+		\makebox[10cm][l]{Prof(a). \@orientador, \@orientadorestitulo, \@siglaprograma/\@siglauniversidade (Presidente)}
 
-\hspace{5cm} \hrulefill
+		\vspace{2cm}
+		\makebox[10cm]{\hrulefill}\\
+		\makebox[10cm][l]{Prof(a). \@coorientador, \@orientadorestitulo, \@siglaprograma/\@siglauniversidade}
 
-Prof(a). \@orientador, \@orientadorestitulo, \@siglaprograma/\@siglauniversidade (Presidente)
+		\vspace{2cm}
+		\makebox[10cm]{\hrulefill}\\
+		\makebox[10cm][l]{Prof(a). Nome do Representante da Banca, \@orientadorestitulo, \@siglaprograma/\@siglauniversidade}
 
-\vspace{2cm}
-\hspace{5cm} \hrulefill
+		\vspace{2cm}
+		\makebox[10cm]{\hrulefill}\\
+		\makebox[10cm][l]{Prof(a). Nome do Representante da Banca, \@orientadorestitulo, \@siglaprograma/\@siglauniversidade}
 
-Prof(a). \@coorientador, \@orientadorestitulo, \@siglaprograma/\@siglauniversidade
-
-\vspace{2cm}
-\hspace{5cm} \hrulefill
-
-Prof(a). Nome do Representante da Banca, \@orientadorestitulo, NCE/\@siglauniversidade
-
-
-\vspace{2cm}
-\hspace{5cm} \hrulefill
-
-Prof(a). Nome do Representante da Banca, \@orientadorestitulo, \@siglaprograma/\@siglauniversidade
-
-\end{flushright}
-
+	\end{center}
 \end{spacing}
 \makeatother
-\newpage
