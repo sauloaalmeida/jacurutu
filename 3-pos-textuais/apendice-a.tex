@@ -68,7 +68,7 @@ Seguem os exemplos de itens mais comuns:
 
 	\begin{figure}[H]
 		\centering
-		\caption{mapeamento das principais aplicações do aprendizado de máquina.}
+		\caption{Mapeamento das principais aplicações do aprendizado de máquina.}
 		\copyrightbox[b]{\includegraphics[width=0.7\linewidth]{mlapplications}}%
 		{Fonte: Extraido de \cite{ApplicationMachineLearning}}
 		\label{fig:mlapplication}
@@ -87,7 +87,7 @@ Seguem os exemplos de itens mais comuns:
 
 	\item \MakeUppercase{Gráficos}
 
-	As regras de formatação dos gráficos são similares as das imagens. É recomendado que durante a apresentação de um gráfico, as suas informações sejam claramente descritas de forma textual, para que qualquer pessoa mesmo sem a visualização do gráfico, consida entender do que se trata. As informações sobre as fontes com detalhamento da citação daquela referência ou indicação de criação do prórprio altor, também são as mesmas.
+	As regras de formatação dos gráficos são similares as das imagens. É recomendado que durante a apresentação de um gráfico, as suas informações sejam claramente descritas de forma textual, para que qualquer pessoa mesmo sem a visualização do gráfico, consida entender do que se trata. As informações sobre as fontes com detalhamento da citação daquela referência ou indicação de criação do prórprio autor, também são as mesmas.
 
 	O {\LaTeX} possui pacotes que permitem criar gráficos em tempo de compilação do documento. No Projeto Jacurutu, nenhum desse pacotes foram utilizados. A estratégia adaotada foi gerar imagens para os gráficos em outra ferramentas e salvar em formato PDF, em seguida incluir no documento como uma imagem. Essa estratégia é indicada como uma forma de melhorar a performance no processo de geração do documento final.
 
@@ -101,6 +101,52 @@ Seguem os exemplos de itens mais comuns:
 		\label{fig:tempoprocelectrical}
 	\end{figure}
 
+	\item \MakeUppercase{Tabelas}
+
+	As regras de formatação das tabelas são similares as dos gráficos. É recomendado que durante a apresentação de uma tabelas, as suas informações sejam claramente descritas de forma textual, com explicação de todas as colunas, para que qualquer pessoa mesmo sem a visualização da mesma, consida entender do que se trata. As informações sobre as fontes com detalhamento da citação daquela referência ou indicação de criação do prórprio autor, também são as mesmas.
+
+	A seguir um exemplo da criação de uma tabela simplificada e o seu resultado final, apresentado na Tabela~\ref{tab:tabelaexemplo1}.
+
+	\begin{verbatim}
+	\begin{table}
+		\caption{Exemplo de tabela de uso genérico}
+		\begin{center}
+			\fontsize{10pt}{13pt}\selectfont
+			\begin{tabular}{lcccc}
+				\hline
+				Base de dados & Observações  &   Features   &   Classe  & Desbalanceamento\\
+				& (used/total) & (used/total) & (used/total)  &                  \\
+				\hline
+				Dataset1 &   150/150    &     4/4      &     3/3       & 1.00    \\
+				Dataset3 &   208/208    &    60/60     &     2/2       & 1.14    \\
+				Dataset3 &   214/214    &     9/10     &     6/7       & 8.44    \\
+				\hline
+				\multicolumn{5}{l}{Fonte: O autor (2025)}
+			\end{tabular}
+			\label{tab:tabelaexemplo1}
+		\end{center}
+	\end{table}
+	\end{verbatim}
+	
+	\begin{table}[H]
+		\caption{Exemplo de tabela de uso genérico}
+		\begin{center}
+			\fontsize{10pt}{13pt}\selectfont
+			\begin{tabular}{lcccc}
+				\hline
+				Base de dados & Observações  &   Features   &   Classe  & Desbalanceamento\\
+				& (used/total) & (used/total) & (used/total)  &                  \\
+				\hline
+				Dataset1 &   150/150    &     4/4      &     3/3       & 1.00    \\
+				Dataset3 &   208/208    &    60/60     &     2/2       & 1.14    \\
+				Dataset3 &   214/214    &     9/10     &     6/7       & 8.44    \\
+				\hline
+				\multicolumn{5}{l}{Fonte: O autor (2025)}
+			\end{tabular}
+			\label{tab:tabelaexemplo1}
+		\end{center}
+	\end{table}
+	
 	\item \MakeUppercase{Listas}
 
 	As listas utilizadas no modelo (se numeração) seguem a configuração nativa do próprio latex, e para utilizá-las, não é necessário adicionar nenhum pacote extra.
@@ -224,7 +270,7 @@ Seguem os exemplos de itens mais comuns:
 		\item É possível realizar esse processo de paralelização ...?
 	\end{enumerate}
 	
-	O Apêndice C também apresenta um formulário, onde uma lista enumerada foi utilizada para realizar a formatação de um formulário.
+	O Apêndice C também apresenta um formulário, onde uma lista enumerada foi utilizada para realizar a formatação das suas questões.
 
 	\item \MakeUppercase{Equações e fórmulas}
 
