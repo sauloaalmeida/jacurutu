@@ -13,9 +13,9 @@ Maores informações técnicas sobre o modelo e os pacotes utilizados, podem ser
 
 O Apêndice B, apresenta um exemplo de um apêndice que foi incluído a partir de um outro documento do autor, mas no corpo do trabalho.
 
-O Apêndice C é um exemplo de um formuário de pesquisa, produzido pelo próprio autor, mas que foi incluído com os comandos \LaTeX.\\
+O Apêndice C é um exemplo de um formuário de pesquisa, produzido pelo próprio autor, mas que foi incluído com os comandos \LaTeX.
 
-Seguem os exemplos de itens mais comuns:
+Seguem algumas informações técnicas sobre o modelo e alguns exemplos de itens mais comuns:
 
 \begin{enumerate}
 	\item \MakeUppercase{Citações}
@@ -114,12 +114,12 @@ Seguem os exemplos de itens mais comuns:
 			\fontsize{10pt}{13pt}\selectfont
 			\begin{tabular}{lcccc}
 				\hline
-				Base de dados & Observações  &   Features   &   Classe  & Desbalanceamento\\
-				& (used/total) & (used/total) & (used/total)  &                  \\
+				Bases & Observações & Features & Classe & Desbalanceamento\\
+				& (used/total) & (used/total) & (used/total)  &           \\
 				\hline
-				Dataset1 &   150/150    &     4/4      &     3/3       & 1.00    \\
-				Dataset3 &   208/208    &    60/60     &     2/2       & 1.14    \\
-				Dataset3 &   214/214    &     9/10     &     6/7       & 8.44    \\
+				Dataset1 & 150/150 &  4/4  & 3/3 & 1.00    \\
+				Dataset3 & 208/208 & 60/60 & 2/2 & 1.14    \\
+				Dataset3 & 214/214 & 9/10  & 6/7 & 8.44    \\
 				\hline
 				\multicolumn{5}{l}{Fonte: O autor (2025)}
 			\end{tabular}
@@ -151,7 +151,7 @@ Seguem os exemplos de itens mais comuns:
 
 	As listas utilizadas no modelo (se numeração) seguem a configuração nativa do próprio latex, e para utilizá-las, não é necessário adicionar nenhum pacote extra.
 
-	Um exemplo de lista simples pode ser criada utilizando os comandos \verb|\begin{itemize}| e \verb|\item|, como demostrado a seguir:
+	Um exemplo de lista pode ser criada utilizando os comandos \verb|\begin{itemize}| e \verb|\item|, como demostrado a seguir:
 
 	\begin{verbatim}
 		\begin{itemize}
@@ -283,8 +283,9 @@ Seguem os exemplos de itens mais comuns:
 	O seguinte exemplo apresenta a criação de uma equação com uma descrição detalhada e uma referencia usando o comando \verb|\eqref{label}|.
 
 	\begin{verbatim}
-		Essa métrica é estabelecida pela equação~\eqref{eq:diferenca_percentual},
-		onde \(DP\) é a Diferença Percentual, \(T_p\) é o Tempo em Paralelo
+		Essa métrica é estabelecida pela equação
+		~\eqref{eq:diferenca_percentual}, onde \(DP\)
+		é a Diferença Percentual, \(T_p\) é o Tempo em Paralelo
 		e \(T_s\) é o Tempo Serial.
 
 		\begin{equation}
@@ -294,7 +295,7 @@ Seguem os exemplos de itens mais comuns:
 	\end{verbatim}
 
 
-	O reultado é apresentado a seguir:\\
+	O reultado é apresentado a seguir:
 
 	Essa métrica é estabelecida pela equação~\eqref{eq:diferenca_percentual}, onde \(DP\) é a Diferença Percentual, \(T_p\) é o Tempo em Paralelo e \(T_s\) é o Tempo Serial.
 
