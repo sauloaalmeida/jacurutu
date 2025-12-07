@@ -33,7 +33,7 @@ identifiers:
       Esse é o DOI que aponta para a versão LaTeX mais
       atualizada de todas as versões do projeto
 repository-code: >-
-  https://github.com/sauloaalmeida/modelo-guiado-trabalho-academico-ufrj
+  https://github.com/sauloaalmeida/jacurutu
 abstract: >-
   O Projeto Jacututu é um modelo em LaTeX simplificado e de
   fácil manutenção, que tem por objetivo atender às regras
