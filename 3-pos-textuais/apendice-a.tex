@@ -1,16 +1,307 @@
 \newpage
-
-% Definido um novo cabeçalho com o título do elemento atual
-\fancypagestyle{tituloanexoapendice}[plain]{
-    \fancyhead[C]{\bfseries\uppercase{Apêndice A - Plano da revisão sistemática}}
-}
-
-% Resolvendo bug de erro de pagina no hyperref e definindo nova entrada do sumário
 \phantomsection
-\addcontentsline{toc}{chapter}{\MakeUppercase{Apêndice A - Plano da revisão sistemática}} 
+\addcontentsline{toc}{chapter}{\MakeUppercase{Apêndice A - Informações técnicas e formatações}}
+\begin{center}
+\textbf{\MakeUppercase{Apêndice A - Informações técnicas e formatações}}
+\end{center}
 
-% Inclui apenas a primeira página do PDF, com estilo que tem o titulo desse elemento
-\includepdf[pages=1,scale=0.82,frame=true,pagecommand={\thispagestyle{tituloanexoapendice}}]{metadados/plano_revisao.pdf}
+Os apêndices contidos nesse projeto, servem como exemplos que podem ser utilizados pelos autores que utilizam esse modelo. Lembrando que apêndices são complementos do trabalho que também foram produzidos pelo autor, conforme explicado no item 3.1.4.3 do Manual do SiBI \cite{ManualSibi2025}.
 
-% Inclui da página 2 em diante do PDF, com o cabeçalho padrão apenas com a paginação
-\includepdf[pages=2-,scale=0.82,frame=true,pagecommand={\thispagestyle{plain}}]{metadados/plano_revisao.pdf}
+No Apêndice A, são apresentadas informações técinicas do modelo, como a explicação de alguns pacotes utilizados, e algumas funcionalidades do modelo bem como guns exemplos de itens e formatações que são corriqueiramente utilizadas em um documento {\LaTeX}, como Citações, Figuras, Tebelas e etc.
+
+Maores informações técnicas sobre o modelo e os pacotes utilizados, podem ser obtidas na wiki do projeto \cite{wiki_jacurutu}.
+
+O Apêndice B, apresenta um exemplo de um apêndice que foi incluído a partir de um outro documento do autor, mas no corpo do trabalho.
+
+O Apêndice C é um exemplo de um formuário de pesquisa, produzido pelo próprio autor, mas que foi incluído com os comandos \LaTeX.
+
+Seguem algumas informações técnicas sobre o modelo e alguns exemplos de itens mais comuns:
+
+\begin{enumerate}
+	\item \MakeUppercase{Citações}
+
+	O conjunto de configurações estabelecidas pelo projeto Jacurutu, garatem que todas as citações e referências estejam corretas em relação ao formato e com isso o autor não precisa se preocupar com a corretude do trabalho nesse aspecto, podendo focar no que realmente importa, que é o conteúdo do seu trabalho.
+
+	O modelo adota o padrão de citação e de referências estabelecidos pelo Instituto Brasileiro de Informação em Ciência e Tecnologia - IBICT \cite{ibict_site}, que por sua vez está em conformidade com as normas mais recentes estabelecidas pela ABNT \cite{ibict_abnt}.
+
+	A utilização do padrão IBICT foi feita utilizando o estilo utilizado no modelo é fornecido pela IBICT que segue o padrão \textit{Citation Style Language} - CSL \cite{csl} e está disponibilizado no repositório de estilos de citação \cite{zotero_repositorio}, mantidas pelo projeto Zotero \cite{zotero}. Para operacionalização no {\LaTeX} foi utilizado o pacote \cite{csl_package}.
+
+	O estilo utilizado foi o denominado "Instituto Brasileiro de Informação em Ciência e Tecnologia - ABNT (autoria completa)" \cite{ibict_estilo} que foi disponibilizado em 12 de novembro de 2025, e essa última versão é a que está sendo utilizada nesse modelo. A leitura da grande maioria dos estilo CSL não são lidas automáticamente da internet, e precisam ser baixadas, armazenadas e referenciadas dentro do modelo.
+
+	O padrão adotado nesse modelo é o BibTeX, que permite que todas as referências sejam documentadas em um arquivo separado, e podem ser posteriormente urilizados no texto através do comando \verb|\cite{bibId}| O padrão de citação e referências do {\LaTeX} garantem uma consistência entre os itens declarados no arquivo de referẽncias e as referencias que realmente aparecem na seção do trabalho. So serão apresentadas as referências que tiverem alguma citação através do comando \verb|\cite{bibId}|.
+
+	No modelo, o arquivo \verb|3-pos-textuais/referencias.bib| deve ser utilizado para manter as entradas de referência do seu trabalho e respeitando o formato BibTeX e o próprio arquivo .bib de referẽncias desse modelo pode set utilizado como exemplo de partida.
+
+	O pacote \cite{csl_package} pode apresentar erros, não imprimindo a seção de Referências, caso exista algum erro de formatação do padrão BibTex durante as declarações das suas referências no arquivo \verb|3-pos-textuais/referencias.bib| (o que é bem comum de acontecer).
+
+	\item \MakeUppercase{Figuras}
+
+	O conjunto de configurações relacionadas com as figuras contempladas no modelo, já garantem uma aderẽncia ao esperado nos itens 2.10 e 2.11 do Manual do SiBI \cite{ManualSibi2025}.
+
+	Ao declarar uma imagem no documento, ela será adicionada automaticamente na lista de figuras padrão do documento, sem que seja necessário realizar nenhum tipo de configuração extra para essa finalidade.
+
+	Também não é necessário informar a extensão da imagem (como png, jpg ou pdf), e nem o caminho completo de sua localização. Basta informar o nome do arquivo, pois a configuração do modelo vai procurar automaticamente as imagens nos diretórios \verb|figuras/ e figuras/modelo| ao utilizar usando o comando:
+
+	\begin{verbatim}
+		\begin{figure}[H]
+			\centering
+			\caption{Fluxo da metodologia itetariva utilizada no projeto.}
+			\copyrightbox[b]{\includegraphics[scale=0.25]{metodologia}}%
+			{Fonte: O autor (2025)}
+			\label{fig:metodologia}
+		\end{figure}
+	\end{verbatim}
+
+	Foi utilizado o pacote {\LaTeX} \cite{copyrightbox_package} para facilitar a adição das legendas das imagens que devem conter além da descrição, a informação da fonte utilizada.
+
+	Tipicamente a informação da fonte costuma ser o dado do próprio autor, como visto do exemplo da  Fig~\ref{fig:metodologia}
+
+	\begin{figure}[H]
+		\centering
+		\caption{Fluxo da metodologia itetariva utilizada no projeto.}
+		\copyrightbox[b]{\includegraphics[scale=0.15]{metodologia}}%
+		{Fonte: O autor (2025)}
+		\label{fig:metodologia}
+	\end{figure}
+
+	Outra especificação da fonte comumente utilizada é uma citação convencional da fonte utilizada na imagem informando que a imagems utilizada foi exatamente a mesma, como demonstrado no exemplo da Fig~\ref{fig:mlapplication}.
+
+	\begin{figure}[H]
+		\centering
+		\caption{Mapeamento das principais aplicações do aprendizado de máquina.}
+		\copyrightbox[b]{\includegraphics[width=0.7\linewidth]{mlapplications}}%
+		{Fonte: Extraido de \cite{ApplicationMachineLearning}}
+		\label{fig:mlapplication}
+	\end{figure}
+
+	Também é comun informar a referência, mas indicando que a imagem  foi adaptada para a sua utilização, como apresentada no exemplo da Fig~\ref{fig:fluxo_fsp}.
+
+	\begin{figure}[H]
+		\centering
+		\caption{O fluxo básico de funcionamento da etapa de treinamento do FSP.}
+		\copyrightbox[b]{\includegraphics[scale=0.27]{fluxo_fsp}}%
+		{Fonte: Adaptada de \cite{fsp-carolina}}
+		\label{fig:fluxo_fsp}
+	\end{figure}
+
+
+	\item \MakeUppercase{Gráficos}
+
+	As regras de formatação dos gráficos são similares as das imagens. É recomendado que durante a apresentação de um gráfico, as suas informações sejam claramente descritas de forma textual, para que qualquer pessoa mesmo sem a visualização do gráfico, consida entender do que se trata. As informações sobre as fontes com detalhamento da citação daquela referência ou indicação de criação do prórprio autor, também são as mesmas.
+
+	O {\LaTeX} possui pacotes que permitem criar gráficos em tempo de compilação do documento. No Projeto Jacurutu, nenhum desse pacotes foram utilizados. A estratégia adaotada foi gerar imagens para os gráficos em outra ferramentas e salvar em formato PDF, em seguida incluir no documento como uma imagem. Essa estratégia é indicada como uma forma de melhorar a performance no processo de geração do documento final.
+
+	Um exemplo de gráfico construído pelo autor pode ser visto na Fig~\ref{fig:tempoprocelectrical}.
+
+	\begin{figure}[H]
+		\centering
+		\caption{Tempo de execução \textit{Electrical Fault Detection} X quantidade processos}
+		\copyrightbox[b]{\includegraphics[width=0.9\linewidth]{electrical_process}}%
+		{Fonte: O autor (2025)}
+		\label{fig:tempoprocelectrical}
+	\end{figure}
+
+	\item \MakeUppercase{Tabelas}
+
+	As regras de formatação das tabelas são similares as dos gráficos. É recomendado que durante a apresentação de uma tabelas, as suas informações sejam claramente descritas de forma textual, com explicação de todas as colunas, para que qualquer pessoa mesmo sem a visualização da mesma, consida entender do que se trata. As informações sobre as fontes com detalhamento da citação daquela referência ou indicação de criação do prórprio autor, também são as mesmas.
+
+	A seguir um exemplo da criação de uma tabela simplificada e o seu resultado final, apresentado na Tabela~\ref{tab:tabelaexemplo1}.
+
+	\begin{verbatim}
+	\begin{table}
+		\caption{Exemplo de tabela de uso genérico}
+		\begin{center}
+			\fontsize{10pt}{13pt}\selectfont
+			\begin{tabular}{lcccc}
+				\hline
+				Bases & Observações & Features & Classe & Desbalanceamento\\
+				& (used/total) & (used/total) & (used/total)  &           \\
+				\hline
+				Dataset1 & 150/150 &  4/4  & 3/3 & 1.00    \\
+				Dataset3 & 208/208 & 60/60 & 2/2 & 1.14    \\
+				Dataset3 & 214/214 & 9/10  & 6/7 & 8.44    \\
+				\hline
+				\multicolumn{5}{l}{Fonte: O autor (2025)}
+			\end{tabular}
+			\label{tab:tabelaexemplo1}
+		\end{center}
+	\end{table}
+	\end{verbatim}
+	
+	\begin{table}[H]
+		\caption{Exemplo de tabela de uso genérico}
+		\begin{center}
+			\fontsize{10pt}{13pt}\selectfont
+			\begin{tabular}{lcccc}
+				\hline
+				Base de dados & Observações  &   Features   &   Classe  & Desbalanceamento\\
+				& (used/total) & (used/total) & (used/total)  &                  \\
+				\hline
+				Dataset1 &   150/150    &     4/4      &     3/3       & 1.00    \\
+				Dataset3 &   208/208    &    60/60     &     2/2       & 1.14    \\
+				Dataset3 &   214/214    &     9/10     &     6/7       & 8.44    \\
+				\hline
+				\multicolumn{5}{l}{Fonte: O autor (2025)}
+			\end{tabular}
+			\label{tab:tabelaexemplo1}
+		\end{center}
+	\end{table}
+	
+	\item \MakeUppercase{Listas}
+
+	As listas utilizadas no modelo (se numeração) seguem a configuração nativa do próprio latex, e para utilizá-las, não é necessário adicionar nenhum pacote extra.
+
+	Um exemplo de lista pode ser criada utilizando os comandos \verb|\begin{itemize}| e \verb|\item|, como demostrado a seguir:
+
+	\begin{verbatim}
+		\begin{itemize}
+			\item Primeiro item da lista não numerada.
+			\item Segundo item
+			\item Terceiro item.
+		\end{itemize}
+	\end{verbatim}
+
+	Tendo como uma lista como a apresentada abaixo:
+
+	\begin{itemize}
+		\item Primeiro item da lista não numerada.
+		\item Segundo item
+	\end{itemize}
+
+	Também é possível criar sub hierarquia de listas, simplemente criando novos blocos do comando \verb|\begin{itemize}|, dentro de um já existente.
+
+	\begin{verbatim}
+	\begin{itemize}
+		\item Primeiro item da lista não numerada.
+		\item Segundo item, que pode ter um subitem:
+		\begin{itemize}
+			\item Subitem não numerado.
+			\item Outro subitem.
+		\end{itemize}
+		\item Terceiro item.
+	\end{itemize}
+	\end{verbatim}
+
+	O resultado final é apresentado a seguir:
+
+	\begin{itemize}
+		\item Primeiro item da lista não numerada.
+		\item Segundo item, que pode ter um subitem:
+		\begin{itemize}
+			\item Subitem não numerado.
+			\item Outro subitem.
+		\end{itemize}
+		\item Terceiro item.
+	\end{itemize}
+
+	\item \MakeUppercase{Listas Enumeradas}
+
+	As listas enumeradas possuem um comportamento parecido com os das listas convencionais. No seu comportamento mais simples, também não é necessário nenhum pacote extra, para a sua utilização.
+
+	O exemplo a seguir, demonstra como construir uma lista enumerada de forma simplificada:
+
+	\begin{verbatim}
+		\begin{enumerate}
+			\item Primeiro item da lista.
+			\item Segundo item da lista.
+			\begin{enumerate}
+				\item Subitem do segundo item.
+				\item Outro subitem.
+			\end{enumerate}
+			\item Terceiro item.
+		\end{enumerate}
+	\end{verbatim}
+
+	É possível observar na sequência, o resultado dessa listagem:
+
+	\begin{enumerate}
+		\item Primeiro item da lista.
+		\item Segundo item da lista.
+		\begin{enumerate}
+			\item Subitem do segundo item.
+			\item Outro subitem.
+		\end{enumerate}
+		\item Terceiro item.
+	\end{enumerate}
+
+	O modelo configura por padrão um pacote chamado enumitem \cite{enumitem_package}, onde é possível configurar qual o tipo do elemento de contagem que será apresentado em cada nível (como arabiço, romano ou alfabetico), bem como definir prefixos, sufixo e retomar uma contagem de um ponto prévio em outro local do texto, o que pode permitir formatações interessantes durante uma listagem.
+
+	No exemplo a seguir, foi alterado os tipos dos algarítimos utilizados na contagem, alem de ter sido modificado o padrão da numeração para apenas um parêntese após a numeração:
+
+	\begin{verbatim}
+		\begin{enumerate}[label=\arabic*)] % Números romanos em parênteses
+			\item Item em arábico.
+			\item Outro item.
+			\begin{enumerate}[label=\alph*)]
+				\item Subitem do segundo item.
+				\item Outro subitem.
+			\end{enumerate}
+			\item Terceiro item.
+		\end{enumerate}
+	\end{verbatim}
+
+	O resultado pode ser visualizado a seguir:
+
+	\begin{enumerate}[label=\arabic*)] % Números romanos em parênteses
+		\item Item em arábico.
+		\item Outro item.
+		\begin{enumerate}[label=\alph*)]
+			\item Subitem do segundo item.
+			\item Outro subitem.
+		\end{enumerate}
+		\item Terceiro item.
+	\end{enumerate}
+
+	É possível com essa abordagem por exemplo, utilizar uma lista enumerada para apresentar ums listagem específica do seu trabalho, como por exemplo a lista de questões de pesquisa que o seu trabalho tenat responder:
+
+	\begin{verbatim}
+		\begin{enumerate}[label=\textbf{QP\arabic* -}]
+			\item A dinâmica da execução do método de classificação FSP...?
+			\item Quais estratégias de paralelização trazem melhores...?
+			\item É possível realizar esse processo de paralelização ...?
+		\end{enumerate}
+	\end{verbatim}
+
+	O que seria apresentado da seguinte forma:
+
+	\begin{enumerate}[label=\textbf{QP\arabic* -}]
+		\item A dinâmica da execução do método de classificação FSP...?
+		\item Quais estratégias de paralelização trazem melhores...?
+		\item É possível realizar esse processo de paralelização ...?
+	\end{enumerate}
+	
+	O Apêndice C também apresenta um formulário, onde uma lista enumerada foi utilizada para realizar a formatação das suas questões.
+
+	\item \MakeUppercase{Equações e fórmulas}
+
+	As definições de equações e fórmulas são um recurso nativo do {\LaTeX} e com isso nenhum pacote extra é necessário para ter acesso a esse tipo de recurso. Entretanto o pacote amsmath \cite{amsmath_package} foi adicionado ao modelo para permitir criar referências internas entre as equações e formulas e suas descrições no texto através do comando \verb|\eqref{label}|.
+
+	Também é comum que ao inserir uma equaçaão, sua descrição também seja a mais detalhada possível, possibilitando um possível entendimento mesmo apenas com a leitura da descrição.
+
+	A utilização de equações e fórmulas não necessitam por padrão de uma listagem que contemple todas as equações e formulas utilizadas no trabalho, como acontecem com as figiras e tabelas.
+
+	O seguinte exemplo apresenta a criação de uma equação com uma descrição detalhada e uma referencia usando o comando \verb|\eqref{label}|.
+
+	\begin{verbatim}
+		Essa métrica é estabelecida pela equação
+		~\eqref{eq:diferenca_percentual}, onde \(DP\)
+		é a Diferença Percentual, \(T_p\) é o Tempo em Paralelo
+		e \(T_s\) é o Tempo Serial.
+
+		\begin{equation}
+			DP = (T_p - T_s) / T_s * 100
+			\label{eq:diferenca_percentual}
+		\end{equation}
+	\end{verbatim}
+
+
+	O reultado é apresentado a seguir:
+
+	Essa métrica é estabelecida pela equação~\eqref{eq:diferenca_percentual}, onde \(DP\) é a Diferença Percentual, \(T_p\) é o Tempo em Paralelo e \(T_s\) é o Tempo Serial.
+
+	\begin{equation}
+		DP = (T_p - T_s) / T_s * 100
+		\label{eq:diferenca_percentual}
+	\end{equation}
+
+\end{enumerate}

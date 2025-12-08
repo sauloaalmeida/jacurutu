@@ -1,70 +1,99 @@
 \documentclass[12pt,
-               a4paper, 
-               english,          % Hifenizacoes em ingles
-               brazil            % Ultimo idioma é o padrao do documento
-               ]{report}
+a4paper
+]{report}
 
 %Dados que precisam ser customizados em todo projeto. Ex.: Titulo, Autor, Orientador, etc 
 \input{config/informacoes_gerais}
 
-%Configurações gerais do projeto, normalmente não precisam ser alterados
+%Configurações gerais do projeto, como pacotes e suas configurações específicas. 
+%Normalmente não precisam ser alterados
 \input{config/configuracoes}
 
+%inicio do documento
 \begin{document}
 
-%Includes pré-textuais
-\input{1-pre-textuais/capa}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%  Elementos pré textuais
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%Capa do documento (elemento obrigatório)
+	\input{1-pre-textuais/capa}
 
-\input{1-pre-textuais/folha_rosto}
+	%Folha de rosto do documento (elemento obrigatório)
+	\input{1-pre-textuais/folha_rosto}
 
-\input{1-pre-textuais/ficha_catalografica}
+	%Ficha catalográfica do documento (elemento obrigatório)
+	\input{1-pre-textuais/ficha_catalografica}
 
-\input{1-pre-textuais/folha_aprovacao}
+	%Folha de aprovação do documento (elemento obrigatório)
+	\input{1-pre-textuais/folha_aprovacao}
 
-\input{1-pre-textuais/dedicatoria}
+	%Dedicatória do documento (elemento opcional)
+	\input{1-pre-textuais/dedicatoria}
 
-\input{1-pre-textuais/agradecimentos}
+	%Agradecimento do documento (elemento opicional)
+	\input{1-pre-textuais/agradecimentos}
 
-\input{1-pre-textuais/epigrafe}
+	%Epígrafe do documento (elemento opicional)
+	\input{1-pre-textuais/epigrafe}
 
-\input{1-pre-textuais/resumo}
+	%Resumo do documento (elemento obrigatório)
+	\input{1-pre-textuais/resumo}
 
-\input{1-pre-textuais/abstract}
+	%Abstract do documento (elemento obrigatório)
+	\input{1-pre-textuais/abstract}
 
-\input{1-pre-textuais/lista_figuras}
+	%Lista de figuras do documento (elemento optional, mas fortemente recomendado)
+	\input{1-pre-textuais/lista_figuras}
 
-\input{1-pre-textuais/lista_tabelas}
+	%Lista de tabelas do documento (elemento optional, mas fortemente recomendado)
+	\input{1-pre-textuais/lista_tabelas}
 
-\input{1-pre-textuais/lista_siglas}
+	%Lista de siglas do documento (elemento optional, mas fortemente recomendado)
+	\input{1-pre-textuais/lista_siglas}
 
-\input{1-pre-textuais/sumario}
+	%Sumário do documento (elemento obrigatório)
+	\input{1-pre-textuais/sumario}
 
-%Includes p do texto principal
-\input{2-textos/introducao}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%  Elementos principais do texto
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%Introdução do documento (elemento obrigatório)
+	\input{2-textos/introducao}
 
-\input{2-textos/referencial_teorico}
+	%Referêncial Teórico do documento (elemento recomendado)
+	\input{2-textos/referencial_teorico}
 
-\input{2-textos/metodologia}
+	%Metodologia do documento (elemento recomendado)
+	\input{2-textos/metodologia}
 
-\input{2-textos/desenvolvimento_trabalho}
+	%Desenvolvimento do documento (elemento obrigatório)
+	\input{2-textos/desenvolvimento}
 
-\input{2-textos/experimentos}
+	%Conslusão do documento (elemento obrigatório)
+	\input{2-textos/conclusao}
 
-\input{2-textos/resultados}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%  Elementos pós textuais
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%Referencias do documento (elemento obrigatório)
+	\input{3-pos-textuais/referencias}
 
-\input{2-textos/conclusao}
+	%Glossário do documento (elemento opcional)
+	\input{3-pos-textuais/glossario}
 
-%Includes pós-textuais
-\input{3-pos-textuais/referencias}
+	%Exemplo de apêndice (desenvolvido pelo autor) (elemento opcional)
+	\input{3-pos-textuais/apendice-a}
 
-\input{3-pos-textuais/glossario} % Elemento opcional
+	%Exemplo de apêndice (desenvolvido pelo autor) (elemento opcional)
+	\input{3-pos-textuais/apendice-b}
 
-\input{3-pos-textuais/apendice-a} % Elemento opcional
+	%Exemplo de apêndice (desenvolvido pelo autor) (elemento opcional)
+	\input{3-pos-textuais/apendice-c}
 
-\input{3-pos-textuais/apendice-b} % Elemento opcional
+	%Exemplo de anexo (não foi desenvolvido pelo autor) (elemento opcional)
+	\input{3-pos-textuais/anexo-a}
 
-\input{3-pos-textuais/anexo-a} % Elemento opcional
-
-\input{3-pos-textuais/indice} % Elemento opcional
+	%Índice remissívo (elemento opcional)
+	\input{3-pos-textuais/indice}
 
 \end{document}

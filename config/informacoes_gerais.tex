@@ -1,36 +1,38 @@
 \makeatletter
-\newcommand{\cidade}[1]{\gdef\@cidade{#1}}
-\newcommand{\faculdade}[1]{\gdef\@faculdade{#1}}
-\newcommand{\faculdadesigla}[1]{\gdef\@faculdadesigla{#1}}
-\newcommand{\instcomp}[1]{\gdef\@instcomp{#1}}
-\newcommand{\instnce}[1]{\gdef\@instnce{#1}}
-\newcommand{\instncecurto}[1]{\gdef\@instncecurto{#1}}
-\newcommand{\programa}[1]{\gdef\@programa{#1}}
-\newcommand{\progsigla}[1]{\gdef\@progsigla{#1}}
-\newcommand{\orientadora}[1]{\gdef\@orientadora{#1}}
-\newcommand{\coorientadora}[1]{\gdef\@coorientadora{#1}}
-\newcommand{\orientadorastitulo}[1]{\gdef\@orientadorastitulo{#1}}
-\newcommand{\textofolharosto}[1]{\gdef\@textofolharosto{#1}}
+%Declaração das variáveis
+\newcommand{\nomeuniversidade}[1]{\gdef\@nomeuniversidade{#1}}
+\newcommand{\nomeinstituto}[1]{\gdef\@nomeinstituto{#1}}
+\newcommand{\nomeinstitutoparceiro}[1]{\gdef\@nomeinstitutoparceiro{#1}}
+\newcommand{\nomeprograma}[1]{\gdef\@nomeprograma{#1}}
+\newcommand{\siglaprograma}[1]{\gdef\@siglaprograma{#1}}
 \newcommand{\subtitulo}[1]{\gdef\@subtitulo{#1}}
+\newcommand{\cidade}[1]{\gdef\@cidade{#1}}
+\newcommand{\orientador}[1]{\gdef\@orientador{#1}}
+\newcommand{\coorientador}[1]{\gdef\@coorientador{#1}}
+\newcommand{\orientadorestitulo}[1]{\gdef\@orientadorestitulo{#1}}
+\newcommand{\textofolharosto}[1]{\gdef\@textofolharosto{#1}}
+\newcommand{\siglauniversidade}[1]{\gdef\@siglauniversidade{#1}}
 
 
 %Local onde devem ser alteradas as informações gerais do trabalho
+\nomeuniversidade{Universidade Federal do Rio de Janeiro}
+\nomeinstituto{Instituto de Computação}
+\nomeinstitutoparceiro{Instituto Tércio Pacitti de Aplicações e Pesquisas Computacionais}
+\nomeprograma{Programa de Pós-Graduação em Informática}
+\siglaprograma{PPGI}
+\author{Nome do(a) Autor(a) do Trabalho}
 \title{Título do Trabalho}
 %Caso o trabalho não tenha subtítulo, basta deixar o conteudo do comando subtitulo em branco.
 % Ex:\subtitulo{}
 \subtitulo{: subtítulo do trabalho}
-\author{Nome do(a) Autor(a) do Trabalho}
-\date{2025}
 \cidade{Rio de Janeiro}
-\faculdade{Universidade Federal do Rio de Janeiro}
-\faculdadesigla{UFRJ}
-\instcomp{Instituto de Computação}
-\instnce{Instituto Tércio Pacitti de Aplicações e Pesquisas Computacionais}
-\instncecurto{Instituto Tércio Pacitti de Aplicações}
-\programa{Programa de Pós-Graduação em Informática}
-\progsigla{PPGI}
-\orientadora{Nome do(a) Orientador(a)}
-\coorientadora{Nome do(a) Co-orientador(a)}
-\orientadorastitulo{D.SC}
-\textofolharosto{Dissertação de Mestrado apresentada ao \@programa, \@instcomp\ e  \@instnce, \@faculdade, como requisito parcial à obtenção do título de Mestre em Informática.}
+\date{2025}
+
+\orientador{Nome do(a) Orientador(a)}
+\coorientador{Nome do(a) Co-orientador(a)}
+\orientadorestitulo{D.SC}
+\textofolharosto{Dissertação de Mestrado apresentada ao \@nomeprograma, \@nomeinstituto\ e  \@nomeinstitutoparceiro, \@nomeuniversidade, como requisito parcial à obtenção do título de Mestre em Informática.}
+\siglauniversidade{UFRJ}
+
+
 \makeatother

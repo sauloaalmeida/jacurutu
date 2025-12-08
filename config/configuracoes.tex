@@ -1,68 +1,56 @@
-\ExplSyntaxOn
-\sys_ensure_backend: %forces loading of backend, in older systems use \RequirePackage{expl3}
-\pdf_version_gset:n{1.7}
-\ExplSyntaxOff
+%Configuração do idioma usado no documento
+\usepackage[brazilian]{babel}
 
-\usepackage[brazilian]{babel}              % Traduções utilizados por vários pacotes
-\usepackage[top=3cm,                    % definição padrao das margens das paginas
-            bottom=2cm,
-            left=3cm,
-            right=2cm]{geometry}
-\usepackage{opensans}                    % Pacote da fonte escolhida: Opções de fontes em: https://ctan.org/topic/font
-\usepackage{color}                      % Permite utilizar cores pelos nomes
-\usepackage{microtype}     			    % para melhorias de justificação
-\usepackage{url}                        % Usado para formatar URLs no texto
-\usepackage{enumitem}                   % Permite alterar o formato das listas enumeradas 
-\usepackage{amsmath}                    % Usado nas referencias de equações, através do comando \eqref
-\usepackage{pdfpages} % Necessario para incluir a ficha catalográfica
-
-\usepackage{hyphenat}                   % Usado para remover a quebra de linha nos recuos das folhas de rosto e de aprovação
-\usepackage{ragged2e}                   % Usado para justificar o texto nos recuos das folhas de rosto e de eprovação
-
-%%%%% Pacote usado para citação descritivas, epigrafe, dedicatoria, e nos recuos das folhas de rosto e de eprovação - INICIO  %%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{epigraph}
-\setlength\epigraphrule{0pt}  % remove a linha padrao do pacote
-\setlength\epigraphwidth{.57\textwidth} % define um tamanho inicial do recuo
-%%%%% Pacote usado para citação descritivas, epigrafe, dedicatoria, e nos recuos das folhas de rosto e de eprovação - FIM  %%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%% Pacote que permite criar indices - INICIO  %%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{imakeidx} % Pacote para criar o índice
-\makeindex[columns=3, options= -s config/estilo-indice.ist] % Configura quantidade de colunas do índice e o arquivo de estilo
-%%%%% Pacote que permite criar indices - FIM  %%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% Usando pacote de estilos de referencias bibliograficas (estilo IBICT complero)
-\usepackage[style=config/instituto-brasileiro-de-informacao-em-ciencia-e-tecnologia-abnt]{citation-style-language}
-\addbibresource{3-pos-textuais/referencias_bibliograficas.bib}
-
-
-
-%%%%% Redefinindo localização da paginação - INICIO %%%%%%%%%%%%%%%%%%%%%%%%
-\setlength{\headheight}{15.3pt} %Corrige warning do header do pacote fancyhdr
-\usepackage{fancyhdr} % Pacote utilizado para alterar a posicao da paginação
-\pagestyle{fancy}
-\fancyhf{} % Limpa todos os cabeçalhos e rodapés padrão
-\fancyhead[R]{\thepage} % Coloca o número da página no canto superior direito
-\renewcommand{\headrulewidth}{0pt} % Remove a linha do cabeçalho (opcional)
-\fancypagestyle{plain}{
-    \fancyhf{} % Limpa cabeçalhos e rodapés
-    \fancyhead[R]{\thepage} % Número da página no canto superior direito
-    \renewcommand{\headrulewidth}{0pt} % Remove a linha do cabeçalho
-}
-%%%%%% Redefinindo localização da paginação - FIM %%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%% Removendo da contagem as a capa e a ficha catalográfica - INICIO  %%%%%%%%%%%%%%%%%%%%%%%%
-\addtocounter{page}{-2} 
-%%%%% Removendo da contagem as a capa e a ficha catalográfica - FIM  %%%%%%%%%%%%%%%%%%%%%%%%
-
-
+%Definição padrao das margens das paginas
+\usepackage[top=3cm,                    
+bottom=2cm,
+left=3cm,
+right=2cm]{geometry}
 
 %%%%% Configuração do espacamento padrão do documento - INICIO  %%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{setspace}  % pacote usado para define o espacamento entre linhas do texto e de partes especificas
 \onehalfspacing % definindo espaçamento padrao de 1,5 nas entrelinhas
 %%%%% Configuração do espacamento padrão do documento - FIM  %%%%%%%%%%%%%%%%%%%%%%%%
+
+% Usado Para identar também intentar a primeira linha do primeiro parágrafo das subseções
+\usepackage{indentfirst}
+
+% Pacote da fonte escolhida: Opções de fontes em: https://ctan.org/topic/font
+\usepackage{opensans}                    
+
+
+%%%%% Removendo da contagem a capa e a ficha catalográfica - INICIO  %%%%%%%%%%%%%%%%%%%%%%%%
+\addtocounter{page}{-2} 
+%%%%% Removendo da contagem a capa e a ficha catalográfica - FIM  %%%%%%%%%%%%%%%%%%%%%%%%
+
+% Usado nas referencias de equações, através do comando \eqref
+\usepackage{amsmath}
+
+% Necessario para incluir a ficha catalográfica, anexos e apêndices
+\usepackage{pdfpages} 
+
+
+% Usado para remover a quebra de linha nos recuos das folhas de rosto e de aprovação
+\usepackage{hyphenat}                   
+
+% Usado para justificar o texto nos recuos das folhas de rosto e de eprovação
+\usepackage{ragged2e}                   
+
+%%%%% Pacote e configurações da paginação - INICIO %%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\headheight}{15.3pt} %Corrige warning do header do pacote fancyhdr
+\usepackage{fancyhdr} % Pacote utilizado para alterar a posicao da paginação
+
+%Redefine o style plain
+\pagestyle{fancy}
+\fancyhf{} % Limpa todos os cabeçalhos e rodapés padrão
+\fancyhead[R]{\thepage} % Coloca o número da página no canto superior direito
+\renewcommand{\headrulewidth}{0pt} % Remove a linha do cabeçalho (opcional)
+\fancypagestyle{plain}{
+	\fancyhf{} % Limpa cabeçalhos e rodapés
+	\fancyhead[R]{\thepage} % Número da página no canto superior direito
+	\renewcommand{\headrulewidth}{0pt} % Remove a linha do cabeçalho
+}
+%%%%% Pacote e configurações da paginação - INICIO %%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -70,23 +58,29 @@
 \usepackage{hyperref} % Cria os links das referencias internas e para links externos tb
 \makeatletter
 \hypersetup{
-    pdftitle={\@title},
-    pdfpagemode=FullScreen,
-    colorlinks=true,      % Ativa a coloração dos links
-    linkcolor=black,     % Cor dos links internos
-    citecolor=black,     % Cor das citações
-    urlcolor=black       % Cor dos links de URL
+	pdftitle={\@title},
+	pdfpagemode=FullScreen,
+	colorlinks=true,      % Ativa a coloração dos links
+	linkcolor=black,     % Cor dos links internos
+	citecolor=black,     % Cor das citações
+	urlcolor=black       % Cor dos links de URL
 }
 \makeatother
 %%%%% Configurações de links das referencias internas e externos - FIM  %%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
+%%%%% Configuração do estilo CSL usado na bibilografia - INICIO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[style=config/template-ibict-completo-20251112]{citation-style-language}
+\addbibresource{3-pos-textuais/referencias.bib}
+%%%%% Configuração do estilo CSL usado na bibilografia - FIM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 %%%%% Configurações do texto de Fonte das imagens - INICIO  %%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{copyrightbox} % Necessario para adicionar origem das imagem e das tabelas
 \makeatletter
 \renewcommand{\CRB@setcopyrightfont}{%
-\color{black}
+	\color{black}
 }
 \makeatother
 %%%%% Configurações do texto de Fonte das imagens - FIM  %%%%%%%%%%%%%%%%%%%%%%%%
@@ -99,6 +93,27 @@
 % A configuração de tabela e figura estão em  seus respectivos arquivos de listagem 
 % juntamente com as suas demais configurações 
 %%%%% Evita reiniciar numeracoes das equações nos capitulos - FIM  %%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%% Pacote que permite criar indices - INICIO  %%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{imakeidx} % Pacote para criar o índice
+\makeindex[columns=3, options= -s config/estilo-indice.ist] % Configura quantidade de colunas do índice e o arquivo de estilo
+%%%%% Pacote que permite criar indices - FIM  %%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Permite alterar o formato das listas enumeradas 
+\usepackage{enumitem}                   
+
+
+% Usado nas referencias de equações, através do comando \eqref
+%\usepackage{amsmath}                    
+%\usepackage{color}                      % Permite utilizar cores pelos nomes
+%\usepackage{microtype}     			    % para melhorias de justificação
+%\usepackage{url}                        % Usado para formatar URLs no texto
+
+
+
+
 
 %%%%% Formatação da lista de figura e de tabelas - INICIO  %%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{titletoc} % Pacote para formatar sumário, lista de figuras e tabelas
@@ -171,6 +186,14 @@
 
 % pacote que gera textos aletorios, pode remover quando for realizar o trabalho
 \usepackage{lipsum} 
+
+
+
+
+%%%%% Definindo melhor configuração das imagens - INICIO %%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
+%%%%% Definindo melhor configuração das imagens - FIM %%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 %%%%% Definindo diretorios padrao do template e do projeto - INICIO %%%%%%%%%%%%%%%%%%%%%%%%
