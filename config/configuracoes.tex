@@ -12,6 +12,12 @@ right=2cm]{geometry}
 \onehalfspacing % definindo espaçamento padrao de 1,5 nas entrelinhas
 %%%%% Configuração do espacamento padrão do documento - FIM  %%%%%%%%%%%%%%%%%%%%%%%%
 
+% Usado para melhorias de alinhamento e justificação do texto
+\usepackage{microtype}
+
+% Usado Para permitir utilizar nomes de cores em diversos pacotes
+\usepackage[table]{xcolor}
+
 % Usado Para identar também intentar a primeira linha do primeiro parágrafo das subseções
 \usepackage{indentfirst}
 
@@ -104,16 +110,8 @@ right=2cm]{geometry}
 % Permite alterar o formato das listas enumeradas 
 \usepackage{enumitem}                   
 
-
-% Usado nas referencias de equações, através do comando \eqref
-%\usepackage{amsmath}                    
-%\usepackage{color}                      % Permite utilizar cores pelos nomes
-%\usepackage{microtype}     			    % para melhorias de justificação
-%\usepackage{url}                        % Usado para formatar URLs no texto
-
-
-
-
+% Usado para formatar URLs no texto
+\usepackage{url}
 
 %%%%% Formatação da lista de figura e de tabelas - INICIO  %%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{titletoc} % Pacote para formatar sumário, lista de figuras e tabelas

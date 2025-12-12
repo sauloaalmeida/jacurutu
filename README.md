@@ -1,7 +1,7 @@
 # Projeto Jacurutu
 ## Um modelo guiado para trabalhos acadêmicos da UFRJ
 
-<img width="150" height="150" alt="logo_jacurutu_pequeno" src="https://github.com/user-attachments/assets/7031c424-ae74-449d-aa54-2a38f9634b83" />
+<img width="150" height="150" alt="logo_jacurutu_pequeno" src="https://github.com/user-attachments/assets/449e9d9a-b087-47d4-b04b-3d2bea836b33" />
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16969842.svg)](https://doi.org/10.5281/zenodo.16969842)
 
