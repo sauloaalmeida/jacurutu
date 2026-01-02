@@ -21,11 +21,15 @@ Seguem algumas sugestões podem ajudar a alcançar esse objetivo de simplicidade
 1. Utilizar pacotes de latex já existentes para conseguir que as formatações desejadas. Por exemplo, para escrever uma epígrafe no formato estabelecido no manual, bastou utilizar o pacote "epigraph" já existente.
 
 ### Semântica do modelo
-É desejado que o esqueleto do modelo, possa ir além da formatação apenas do texto. É possível indicar boas práticas na semântica esperadas em um texto acadêmico, como: as principais seções e subseções esperadas bem como as indicações sobre qual seria o conteúdo esperado para cada uma delas.  
+É desejado que o esqueleto do modelo, possa ir além da formatação apenas do texto. É possível indicar boas práticas na semântica esperadas em um texto acadêmico, como: as principais seções e subseções esperadas bem como as indicações sobre qual seria o conteúdo esperado para cada uma delas.
 
 ## Documentação do projeto
 
 Uma documentação detalhada do projeto pode ser encontrada na [wiki do projeto](../../wiki).
+
+## Problemas conhecidos
+
+A documentação do projeto também possui uma seção para listar os [problemas conhecidos](../../wiki/problemas-conhecidos).
 
 ## Como colaborar
 
@@ -39,7 +43,8 @@ O tópico [Como citar ](../../wiki/Como-citar) da wiki do projeto, apresenta de 
 
 1. Avaliar o formato atual do texto gerado pelo projeto (pode ser olhando o arquivo [`documento.pdf`](documento.pdf), na raiz do repositório);
 1. Verificar se ja existe uma issue aberta ou em execução para solucionar o problema;
-1. Caso não exista, abrir um issue para que o problema possa ser endereçado.
+1. Verificar a seção de [problemas conhecidos](../../wiki/problemas-conhecidos) para entender se o que está ocorrendo é de fato um problema, ou se é algo que já esta resolvido;
+1. Caso não encontr o problema específico, abrir uma [nova issue/ticket](../../issues/new?q=is:issue) para que o problema possa ser endereçado.
 
 ### Resolver alguma das issues abertas 
 
@@ -54,5 +59,3 @@ Possui bastante informação sobre funcionamento básico e o que já é disponí
 Repositório oficial de pacotes LaTeX
 1. [Fontes disponíveis no CTAN](https://ctan.org/topic/font)
 Lista com fontes disponíveis em pacotes para o LaTeX
-
-

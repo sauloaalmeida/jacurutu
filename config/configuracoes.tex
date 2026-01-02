@@ -35,6 +35,8 @@ right=2cm]{geometry}
 % Necessario para incluir a ficha catalográfica, anexos e apêndices
 \usepackage{pdfpages} 
 
+% Para utilizar tabelas longas e quebrar automaticamente entre páginas
+\usepackage{longtable}
 
 % Usado para remover a quebra de linha nos recuos das folhas de rosto e de aprovação
 \usepackage{hyphenat}                   
@@ -192,7 +194,16 @@ right=2cm]{geometry}
 \usepackage{float}
 %%%%% Definindo melhor configuração das imagens - FIM %%%%%%%%%%%%%%%%%%%%%%%%
 
-
+%%%%% Configurações de flutuantes - INICIO %%%%%%%%%%%%%%%%%%%%%%%%
+% Não permite que elementos flutuantes (figuras, tabelas, etc.) fiquem em páginas sem texto, quando há espaço
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.9}
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{10}
+%%%%% Configurações de flutuantes - FIM %%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% Definindo diretorios padrao do template e do projeto - INICIO %%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{graphicx}		            % Inclusão de gráficos, pdfs

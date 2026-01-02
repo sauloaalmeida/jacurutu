@@ -28,15 +28,15 @@ Seguem algumas informações técnicas sobre o modelo e alguns exemplos de itens
 
 	O estilo utilizado foi o denominado "Instituto Brasileiro de Informação em Ciência e Tecnologia - ABNT (autoria completa)" \cite{ibict_estilo} que foi disponibilizado em 12 de novembro de 2025, e essa última versão é a que está sendo utilizada nesse modelo. A leitura da grande maioria dos estilo CSL não são lidas automáticamente da internet, e precisam ser baixadas, armazenadas e referenciadas dentro do modelo.
 
-	O padrão adotado nesse modelo é o BibTeX, que permite que todas as referências sejam documentadas em um arquivo separado, e podem ser posteriormente urilizados no texto através do comando \verb|\cite{bibId}| O padrão de citação e referências do {\LaTeX} garantem uma consistência entre os itens declarados no arquivo de referẽncias e as referencias que realmente aparecem na seção do trabalho. So serão apresentadas as referências que tiverem alguma citação através do comando \verb|\cite{bibId}|.
+	O padrão adotado nesse modelo é o BibTeX, que permite que todas as referências sejam documentadas em um arquivo separado, e podem ser posteriormente urilizados no texto através do comando \verb|\cite{bibId}| O padrão de citação e referências do {\LaTeX} garantem uma consistência entre os itens declarados no arquivo de referências e as referencias que realmente aparecem na seção do trabalho. So serão apresentadas as referências que tiverem alguma citação através do comando \verb|\cite{bibId}|.
 
-	No modelo, o arquivo \verb|3-pos-textuais/referencias.bib| deve ser utilizado para manter as entradas de referência do seu trabalho e respeitando o formato BibTeX e o próprio arquivo .bib de referẽncias desse modelo pode set utilizado como exemplo de partida.
+	No modelo, o arquivo \verb|3-pos-textuais/referencias.bib| deve ser utilizado para manter as entradas de referência do seu trabalho e respeitando o formato BibTeX e o próprio arquivo .bib de referências desse modelo pode set utilizado como exemplo de partida.
 
 	O pacote \cite{csl_package} pode apresentar erros, não imprimindo a seção de Referências, caso exista algum erro de formatação do padrão BibTex durante as declarações das suas referências no arquivo \verb|3-pos-textuais/referencias.bib| (o que é bem comum de acontecer).
 
 	\item \MakeUppercase{Figuras}
 
-	O conjunto de configurações relacionadas com as figuras contempladas no modelo, já garantem uma aderẽncia ao esperado nos itens 2.10 e 2.11 do Manual do SiBI \cite{ManualSibi2025}.
+	O conjunto de configurações relacionadas com as figuras contempladas no modelo, já garantem uma aderência ao esperado nos itens 2.10 e 2.11 do Manual do SiBI \cite{ManualSibi2025}.
 
 	Ao declarar uma imagem no documento, ela será adicionada automaticamente na lista de figuras padrão do documento, sem que seja necessário realizar nenhum tipo de configuração extra para essa finalidade.
 
@@ -146,6 +146,216 @@ Seguem algumas informações técnicas sobre o modelo e alguns exemplos de itens
 			\label{tab:tabelaexemplo1}
 		\end{center}
 	\end{table}
+
+	Também foi acicionado ao modelo um exemplo de tabela longa, usando o pacote longtable \cite{longtable_package}, que permite criar tabelas que se adaptam à quebra de página. Vale ressaltar que o alinhamento padrão desse pacote já é centralizado, e que ele já incrementa o contador das tabelas do documento. A seguir um exemplo de criação de uma tabela longa em \LaTeX, seguido da visualização do resultado da tabela, acessível na Tabela ~\ref{tab:long}
+	
+	\begin{verbatim}
+
+		\begin{longtable}{|l|l|c|}
+			\caption{Um exemplo de tabela longa.} \label{tab:long} \\
+			
+			\hline \multicolumn{1}{|c|}{\textbf{Coluna 1}} &
+			 \multicolumn{1}{c|}{\textbf{Coluna 2}} &
+			  \multicolumn{1}{c|}{\textbf{Coluna 3}} \\ \hline 
+			\endfirsthead
+			
+			\multicolumn{3}{c}%
+			{{\bfseries \tablename\ \thetable{} 
+					-- continuação da página anterior}} \\
+			\hline \multicolumn{1}{|c|}{\textbf{Coluna 1}} &
+			 \multicolumn{1}{c|}{\textbf{Coluna 2}} &
+			  \multicolumn{1}{c|}{\textbf{Coluna 3}} \\ \hline 
+			\endhead
+			
+			\hline \multicolumn{3}{|r|}{{Continua na próxima 
+					página}} \\ \hline
+			\endfoot
+			
+			\hline \multicolumn{3}{l}{{Fonte: O autor (2025)}} \\
+			\endlastfoot
+			
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+		\end{longtable}
+
+	\end{verbatim}	
+	
+\begin{longtable}{|l|l|c|}
+	\caption{Um exemplo de tabela longa.} \label{tab:long} \\
+	
+	\hline \multicolumn{1}{|c|}{\textbf{Coluna 1}} & \multicolumn{1}{c|}{\textbf{Coluna 2}} & \multicolumn{1}{c|}{\textbf{Coluna 3}} \\ \hline 
+	\endfirsthead
+	
+	\multicolumn{3}{c}%
+	{{\bfseries \tablename\ \thetable{} -- continuação da página anterior}} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Coluna 1}} & \multicolumn{1}{c|}{\textbf{Coluna 2}} & \multicolumn{1}{c|}{\textbf{Coluna 3}} \\ \hline 
+	\endhead
+	
+	\hline \multicolumn{3}{|r|}{{Continua na próxima página}} \\ \hline
+	\endfoot
+	
+	\hline \multicolumn{3}{l}{{Fonte: O autor (2025)}} \\
+	\endlastfoot
+	
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+\end{longtable}
 	
 	\item \MakeUppercase{Listas}
 
