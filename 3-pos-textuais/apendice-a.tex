@@ -146,6 +146,216 @@ Seguem algumas informações técnicas sobre o modelo e alguns exemplos de itens
 			\label{tab:tabelaexemplo1}
 		\end{center}
 	\end{table}
+
+	Também foi acicionado ao modelo um exemplo de tabela longa, usando o pacote longtable \cite{longtable_package}, que permite criar tabelas que se adaptam à quebra de página. Vale ressaltar que o alinhamento padrão desse pacote já é centralizado, e que ele já incrementa o contador das tabelas do documento. A seguir um exemplo de criação de uma tabela longa em \LaTeX, seguido da visualização do resultado da tabela, acessível na Tabela ~\ref{tab:long}
+	
+	\begin{verbatim}
+
+		\begin{longtable}{|l|l|c|}
+			\caption{Um exemplo de tabela longa.} \label{tab:long} \\
+			
+			\hline \multicolumn{1}{|c|}{\textbf{Coluna 1}} &
+			 \multicolumn{1}{c|}{\textbf{Coluna 2}} &
+			  \multicolumn{1}{c|}{\textbf{Coluna 3}} \\ \hline 
+			\endfirsthead
+			
+			\multicolumn{3}{c}%
+			{{\bfseries \tablename\ \thetable{} 
+					-- continuação da página anterior}} \\
+			\hline \multicolumn{1}{|c|}{\textbf{Coluna 1}} &
+			 \multicolumn{1}{c|}{\textbf{Coluna 2}} &
+			  \multicolumn{1}{c|}{\textbf{Coluna 3}} \\ \hline 
+			\endhead
+			
+			\hline \multicolumn{3}{|r|}{{Continua na próxima 
+					página}} \\ \hline
+			\endfoot
+			
+			\hline \multicolumn{3}{l}{{Fonte: O autor (2025)}} \\
+			\endlastfoot
+			
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+			One & abcdef ghjijklmn & 123.456778 \\
+		\end{longtable}
+
+	\end{verbatim}	
+	
+\begin{longtable}{|l|l|c|}
+	\caption{Um exemplo de tabela longa.} \label{tab:long} \\
+	
+	\hline \multicolumn{1}{|c|}{\textbf{Coluna 1}} & \multicolumn{1}{c|}{\textbf{Coluna 2}} & \multicolumn{1}{c|}{\textbf{Coluna 3}} \\ \hline 
+	\endfirsthead
+	
+	\multicolumn{3}{c}%
+	{{\bfseries \tablename\ \thetable{} -- continuação da página anterior}} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Coluna 1}} & \multicolumn{1}{c|}{\textbf{Coluna 2}} & \multicolumn{1}{c|}{\textbf{Coluna 3}} \\ \hline 
+	\endhead
+	
+	\hline \multicolumn{3}{|r|}{{Continua na próxima página}} \\ \hline
+	\endfoot
+	
+	\hline \multicolumn{3}{l}{{Fonte: O autor (2025)}} \\
+	\endlastfoot
+	
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+	One & abcdef ghjijklmn & 123.456778 \\
+\end{longtable}
 	
 	\item \MakeUppercase{Listas}
 
