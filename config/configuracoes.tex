@@ -22,8 +22,7 @@ right=2cm]{geometry}
 \usepackage{indentfirst}
 
 % Pacote da fonte escolhida: Opções de fontes em: https://ctan.org/topic/font
-\usepackage{opensans}                    
-
+\usepackage{opensans}
 
 %%%%% Removendo da contagem a capa e a ficha catalográfica - INICIO  %%%%%%%%%%%%%%%%%%%%%%%%
 \addtocounter{page}{-2} 
@@ -42,7 +41,11 @@ right=2cm]{geometry}
 \usepackage{hyphenat}                   
 
 % Usado para justificar o texto nos recuos das folhas de rosto e de eprovação
-\usepackage{ragged2e}                   
+\usepackage{ragged2e}
+
+% Pacote usado para customizar formato do caption das tabelas
+\usepackage{caption}
+\captionsetup[table]{labelsep=endash}
 
 %%%%% Pacote e configurações da paginação - INICIO %%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\headheight}{15.3pt} %Corrige warning do header do pacote fancyhdr
