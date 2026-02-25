@@ -22,8 +22,7 @@ right=2cm]{geometry}
 \usepackage{indentfirst}
 
 % Pacote da fonte escolhida: Opções de fontes em: https://ctan.org/topic/font
-\usepackage{opensans}                    
-
+\usepackage{opensans}
 
 %%%%% Removendo da contagem a capa e a ficha catalográfica - INICIO  %%%%%%%%%%%%%%%%%%%%%%%%
 \addtocounter{page}{-2} 
@@ -42,7 +41,13 @@ right=2cm]{geometry}
 \usepackage{hyphenat}                   
 
 % Usado para justificar o texto nos recuos das folhas de rosto e de eprovação
-\usepackage{ragged2e}                   
+\usepackage{ragged2e}
+
+% Pacote usado para customizar formato do caption das tabelas e das figuras
+\usepackage{caption}
+\captionsetup[table]{labelsep=endash}
+\captionsetup[table]{skip=-5pt}
+\captionsetup[figure]{labelsep=endash}
 
 %%%%% Pacote e configurações da paginação - INICIO %%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\headheight}{15.3pt} %Corrige warning do header do pacote fancyhdr
@@ -80,6 +85,10 @@ right=2cm]{geometry}
 
 %%%%% Configuração do estilo CSL usado na bibilografia - INICIO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[style=config/template-ibict-completo-20251112]{citation-style-language}
+\cslsetup{
+	%remove a identacao da primeira linha da referencia
+	bib-par-indent = 0pt
+}
 \addbibresource{3-pos-textuais/referencias.bib}
 %%%%% Configuração do estilo CSL usado na bibilografia - FIM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -120,10 +129,10 @@ right=2cm]{geometry}
 
 %a configuração só funciona se for antes do documentclass
 
-%Lista de Tabelas
+%Lista de Figuras
 \titlecontents{figure}[0pt]
 {}
-{\figurename\ \thecontentslabel\ - }
+{\figurename\ \thecontentslabel\ -- }
 {}
 {\titlerule*[0.4pc]{.}\contentspage}
 [\addvspace{5pt}]
@@ -131,7 +140,7 @@ right=2cm]{geometry}
 %Lista de Tabelas
 \titlecontents{table}[0pt]
 {}
-{\tablename\ \thecontentslabel\ - }
+{\tablename\ \thecontentslabel\ -- }
 { }
 {\titlerule*[0.4pc]{.}\contentspage}
 [\addvspace{5pt}]
