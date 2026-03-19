@@ -514,6 +514,66 @@ Seguem algumas informações técnicas sobre o modelo e alguns exemplos de itens
 		\label{eq:diferenca_percentual}
 	\end{equation}
 
+	\item \MakeUppercase{Links Internos}
+
+	O Pacote Hyperref \cite{hyperref_package}, também permite criar links internos no texto. existem dois tipos de links internos que são comunmente usados:
+
+	\begin{enumerate}[label=\arabic*)] % Números romanos em parênteses
+		\item Links para estruturas enumeradas do \LaTeX, como: CapítulosSeções, Subseções, Figuras ou Tabelas;
+		\item Links para algum pedaço não estruturado do texto, como por exemplo um link para Lista de siglas.
+	\end{enumerate}
+
+	Para o primeiro caso, dos links para estruturas enumeradas, o alvo do link deve ter sido marcado previamente utilizando o comando \verb|\label{tipo:nomelabel}|
+
+	Exemplo: Ao iniciar uma Seção (elemento chapter), declara juntamente com a seção o seu label.
+
+	\begin{verbatim}
+		\chapter{Metodologia de pesquisa}\label{cap:metodologia}
+	\end{verbatim}
+
+	Para referenciar esse alvo, utilizar o comando \verb|\ref{tipo:nomelabel}|
+
+	\begin{verbatim}
+		A seção~\ref{cap:metodologia} relata qual foi a metodologia
+		utilizada no trabalho.
+	\end{verbatim}
+
+	O resultado apresenta o número daquele elemento, trasformado em um link no texto:
+
+	A seção~\ref{cap:metodologia} relata qual foi a metodologia utilizada no trabalho.
+
+	É possível também criar um link interno, que utilize ao invés do número, o nome do elemento estruturado. Para esse tipo de link, ao invés do comando \verb|\ref| deve se utilizar o comando \verb|\nameref|
+
+	\begin{verbatim}
+		A seção~\nameref{cap:metodologia} do texto relata qual foi a metodologia
+		utilizada no trabalho.
+	\end{verbatim}
+
+	O resultado é apresentado a seguir:
+
+	A seção~\nameref{cap:metodologia}, relata qual foi a metodologia utilizada no trabalho.
+
+	Para o segundo tipo de link interno, o de links para textos não estruturados, é preciso marcar o alvo utilizando o comando \verb|\hypertarget|.
+
+	Um exemplo seria poderia ser utilizado na lista de siglas, onde a sigla seria um alvo, através do comando \verb|\hypertarget{tipo:nomelabel}{texto}|.
+
+	\begin{verbatim}
+	\hypertarget{sigla:AI}{\textbf{AI}}&Artificial Intelligence\\
+	\hypertarget{sigla:CPU}{\textbf{CPU}}&Central Process Unit\\
+	\end{verbatim}
+
+	E o seu uso se daria através do comando \verb|\hyperlink|, que transforma a sigla em um link apontando para o elemento da lista de siglas.
+
+	\begin{verbatim}
+		A sigla \hyperlink{sigla:AI}{AI}, do termo Artificial
+		Intelligence é utilizada de forma cada vex mais corriqueira
+		em nosso cotidiano
+	\end{verbatim}
+
+	O resultado é apresentado a seguir:
+
+	A sigla \hyperlink{sigla:AI}{AI}, do termo Artificial Intelligence é utilizada de forma cada vex mais corriqueira em nosso cotidiano.
+
 	\item \MakeUppercase{Links Externos (URL)}
 
 	Como o modelo já configura o pacote {\LaTeX} URL \cite{url_package}, caso deseje informar um link externo no seu texto (URL), basta utilizar o comando \verb|\url{link}|. Como o podelo também já configura o pacote {\LaTeX} Hyperref \cite{hyperref_package}, esse link será apresentado em formato de link acessível no próprio documento -- ao passar o mouse sobre o link --, como podemos ver no exemplo que segue:
