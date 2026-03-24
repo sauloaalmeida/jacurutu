@@ -545,8 +545,8 @@ Seguem algumas informações técnicas sobre o modelo e alguns exemplos de itens
 	É possível também criar um link interno, que utilize ao invés do número, o nome do elemento estruturado. Para esse tipo de link, ao invés do comando \verb|\ref| deve se utilizar o comando \verb|\nameref|
 
 	\begin{verbatim}
-		A seção~\nameref{cap:metodologia} do texto relata qual foi a metodologia
-		utilizada no trabalho.
+		A seção~\nameref{cap:metodologia} do texto relata qual foi a 
+		metodologia utilizada no trabalho.
 	\end{verbatim}
 
 	O resultado é apresentado a seguir:
@@ -588,5 +588,68 @@ Seguem algumas informações técnicas sobre o modelo e alguns exemplos de itens
 
 	Também foi criado um DOI para identificar univocamente essa implementação, e pode ser acessada em: \url{https://doi.org/10.5281/zenodo.16969842}.
 
+\item \MakeUppercase{Estruturas Matemáticas}
+
+	O modelo está configurado para trabalhar com algumas estruturas matemáticas. Ja vem configurado para trabalhar com Teoremas, Definições e Propriedades.
+	
+	A seguir é apresentada como seria a criação de uma definição de um teorema utilizando o modelo:
+
+	\begin{verbatim}
+	\begin{theorem}[Caracterização da Medida $\lambda$]
+		Dadas as densidades individuais $g_i = \mu(\{x_i\})$ 
+		satisfazendo $0 < g_i < 1$ para todo $i$, e definindo 
+		$\lambda$ como a raiz única da equação:
+		\begin{equation}\label{eq:lambda_eq}
+			1 + \lambda = \prod_{i=1}^{n} (1 + \lambda g_i)
+		\end{equation}
+		com $\lambda > -1$, $\lambda \neq 0$, então a medida 
+		$\mu$ definida recursivamente por:
+		\begin{align}
+			\mu(A_1) &= g_1 \nonumber \\
+			\mu(A_i) &= g_i + \mu(A_{i-1}) + \lambda 
+			g_i \mu(A_{i-1}), \quad i = 2,3,\dots,n 
+			\label{eq:recursive}
+		\end{align}
+		onde $A_i = \{x_1, x_2, \dots, x_i\}$, é uma medida
+		 $\lambda$ de Sugeno.
+	\end{theorem}
+	\end{verbatim}
+	
+	O resultado a é apresentado seria o seguinte:
+
+	\begin{theorem}[Caracterização da Medida $\lambda$]
+		Dadas as densidades individuais $g_i = \mu(\{x_i\})$ satisfazendo $0 < g_i < 1$ para todo $i$, e definindo $\lambda$ como a raiz única da equação:
+		\begin{equation}\label{eq:lambda_eq}
+			1 + \lambda = \prod_{i=1}^{n} (1 + \lambda g_i)
+		\end{equation}
+		com $\lambda > -1$, $\lambda \neq 0$, então a medida $\mu$ definida recursivamente por:
+		\begin{align}
+			\mu(A_1) &= g_1 \nonumber \\
+			\mu(A_i) &= g_i + \mu(A_{i-1}) + \lambda g_i \mu(A_{i-1}), \quad i = 2,3,\dots,n \label{eq:recursive}
+		\end{align}
+		onde $A_i = \{x_1, x_2, \dots, x_i\}$, é uma medida $\lambda$ de Sugeno.
+	\end{theorem}
+	
+	Segue também um exemplo de como seria a criação de uma definição utilizando o modelo:
+	
+	\begin{verbatim}
+	\begin{definition}[Medida $\lambda$ de Sugeno]
+		Uma medida fuzzy $\mu$ é dita uma medida $\lambda$ de Sugeno 
+		se existe $\lambda > -1$, $\lambda \neq 0$, tal que para 
+		quaisquer $A, B \subseteq X$ com $A \cap B = \emptyset$:
+		\begin{equation}\label{eq:lambda_add}
+			\mu(A \cup B) = \mu(A) + \mu(B) + \lambda \mu(A) \mu(B)
+		\end{equation}
+	\end{definition}
+	\end{verbatim}
+	
+	O resultado a é apresentado seria o seguinte:
+
+	\begin{definition}[Medida $\lambda$ de Sugeno]
+		Uma medida fuzzy $\mu$ é dita uma medida $\lambda$ de Sugeno se existe $\lambda > -1$, $\lambda \neq 0$, tal que para quaisquer $A, B \subseteq X$ com $A \cap B = \emptyset$:
+		\begin{equation}\label{eq:lambda_add}
+			\mu(A \cup B) = \mu(A) + \mu(B) + \lambda \mu(A) \mu(B)
+		\end{equation}
+	\end{definition}
 
 \end{enumerate}
