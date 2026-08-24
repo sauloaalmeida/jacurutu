@@ -1,2 +1,42 @@
+\newpage
 \thispagestyle{empty}
-\includepdf{metadados/ficha_catalografica.pdf}
+%Habilita o uso de variáveis
+\makeatletter
+\begin{spacing}{1}
+\centering
+	\textbf{Informações Coleta CAPES} \\
+	\vspace{0,5cm}
+	\begin{tabularx}{\textwidth}{|X|}
+		\hline
+		\rule{0pt}{1\normalbaselineskip}Tipo de produção intelectual: \\[8pt]
+		\hspace{1cm}( x ) Bibliográfica \\
+		\hspace{1cm}(\hspace{14px}) Artística \\
+		\hspace{1cm}(\hspace{14px}) Tecnológica \\
+		\hspace{1cm}(\hspace{14px}) Técnica \\
+		\\
+		\hline
+		\rule{0pt}{1\normalbaselineskip}Projeto de pesquisa vinculado à produção intelectual? \\[8pt]
+		\hspace{1cm}(\hspace{14px}) Sim \\
+		\hspace{1cm}( x ) Não \\
+		\\
+		\hline
+		\rule{0pt}{1\normalbaselineskip}Nome do projeto de pesquisa: \\[8pt]
+		\@title\@subtitulo \\
+		\\
+		\hline
+		\rule{0pt}{1\normalbaselineskip}Área de concentração da produção intelectual: \\[8pt]
+		Ciência da Computação \\
+		\\
+		\hline
+		\rule{0pt}{1\normalbaselineskip}Agência(s) de fomento financiadora(s) da produção intelectual: \\[8pt]
+		CAPES \\[8pt]
+		\hline
+	\end{tabularx}
+
+	\vspace*{\fill}
+
+	\includegraphics[width=0.9\textwidth]{ficha_catalografica}
+	\vspace{1cm}
+
+\end{spacing}
+\makeatother
