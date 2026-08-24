@@ -12,6 +12,7 @@
 \newcommand{\orientadorestitulo}[1]{\gdef\@orientadorestitulo{#1}}
 \newcommand{\textofolharosto}[1]{\gdef\@textofolharosto{#1}}
 \newcommand{\siglauniversidade}[1]{\gdef\@siglauniversidade{#1}}
+\newcommand{\nomecursograduacao}[1]{\gdef\@nomecursograduacao{#1}}
 
 
 %Local onde devem ser alteradas as informações gerais do trabalho
@@ -20,6 +21,7 @@
 \nomeinstitutoparceiro{Instituto Tércio Pacitti de Aplicações e Pesquisas Computacionais}
 \nomeprograma{Programa de Pós-Graduação em Informática}
 \siglaprograma{PPGI}
+\nomecursograduacao{Curso de Bacharelado em Ciência da Computação}
 \author{Nome do(a) Autor(a) do Trabalho}
 \title{Título do Trabalho}
 %Caso o trabalho não tenha subtítulo, basta deixar o conteudo do comando subtitulo em branco.
@@ -31,8 +33,16 @@
 \orientador{Nome do(a) Orientador(a)}
 \coorientador{Nome do(a) Co-orientador(a)}
 \orientadorestitulo{D.SC}
-\textofolharosto{Dissertação de Mestrado apresentada ao \@nomeprograma, \@nomeinstituto\ e  \@nomeinstitutoparceiro, \@nomeuniversidade, como requisito parcial à obtenção do título de Mestre em Informática.}
 \siglauniversidade{UFRJ}
 
+%Para texto folha de rosto de tcc. Descomentar essa, e comentar as demais variáveis \textofolharosto
+%\textofolharosto{Trabalho de conclusão de curso de graduação apresentado ao \@nomeinstituto\ da \@nomeuniversidade, como parte dos requisitos para  obtenção do grau de Bacharel em Ciência da Computação.}
+
+%Para texto folha de rosto de mestrado. Descomentar essa, e comentar as demais variáveis \textofolharosto
+\textofolharosto{Dissertação de Mestrado apresentada ao \@nomeprograma, \@nomeinstituto\ e  \@nomeinstitutoparceiro, \@nomeuniversidade, como requisito parcial à obtenção do título de Mestre em Informática.}
+
+
+%Para texto folha de rosto de doutorado. Descomentar essa, e comentar as demais variáveis \textofolharosto
+%\textofolharosto{Tese de Doutorado apresentada ao \@nomeprograma, \@nomeinstituto\ e  \@nomeinstitutoparceiro, \@nomeuniversidade, como requisito parcial à obtenção do título de Doutor em Informática.}
 
 \makeatother
